@@ -1,0 +1,96 @@
+🎤 DISCURSO PARA LA PROPUESTA
+1. Apertura — Sección Hero (la portada)
+
+"Buenos días. Antes de entrar en detalle, quiero que vean esto como lo que realmente es: una plataforma hecha exclusivamente para CAESI, pensada desde cero para cómo ustedes trabajan hoy — no un programa genérico que tengan que adaptar.
+Le pusimos NEXUS porque la idea es justamente esa: ser el nexo, el punto único donde se junta todo el trabajo documental, las empresas que asesoran, los ingenieros, y los clientes. Lo que ven ahí arriba son las funciones que más nos pidieron — todas están incluidas."
+
+Tip: Si tu cliente trae a sus ingenieros, mira a los ingenieros cuando digas "exclusivamente para CAESI" — eso engancha.
+
+2. El Problema Actual
+
+"Antes de mostrarles cómo funciona, quiero que reconozcan estas seis situaciones que ustedes mismos me describieron. Si alguna no aplica, díganmelo y la quitamos.
+La información dispersa por empresa: hoy cada cliente tiene su carpeta de Drive, sus correos, sus WhatsApps. Capturar lo mismo una y otra vez: nombre, RFC, domicilio, representante legal — repetido en cada formato de cada norma. La pregunta del cliente '¿qué nos falta?' que no se puede responder rápido. Pedirle documentos al cliente convertido en cadena de mensajes imposible de rastrear. Sus ingenieros trabajando sin visibilidad cruzada. Y la imagen, que frente a empresas grandes, llegar con USB no transmite lo mismo que un sistema dedicado.
+NEXUS resuelve estos seis puntos, uno por uno."
+
+
+3. Ecosistema — La solución en 3 ambientes
+
+"NEXUS está organizado tal cual lo describieron. Tres ambientes que conviven:
+El Panel de Consultores es donde trabajan ustedes y sus ingenieros — su zona de trabajo diario.
+El Portal Cerrado del Cliente es lo que el cliente recibe: un link, sin contraseña, donde solo ve lo que ustedes le pidieron. Tipo Google Form.
+Y la Automatización, que es lo que el sistema hace solo, sin que ustedes lo prendan: respaldos, alertas, historial, el auto-llenado de formatos.
+Lo importante: los tres ambientes están conectados. Cuando el cliente sube un archivo en su portal, ustedes lo ven aparecer en su panel automáticamente."
+
+
+4. Funciones Clave (las dos estrella)
+
+"Esta es probablemente la diapositiva más importante de toda la presentación, porque aquí están las dos cosas que ustedes específicamente me pidieron.
+La primera: combinar correspondencia automático. Ustedes me dijeron que hay datos que se repiten en muchos formatos — nombre de empresa, domicilio, representante legal. Hoy los capturan a mano cada vez. Con NEXUS, los capturan una sola vez en el Maestro de Datos de esa empresa. De ahí en adelante, cada formato Word o Excel que generen para esa empresa ya viene con esos campos llenos. Ahorran 15 a 20 minutos por formato.
+La segunda: solicitudes al cliente con link único. Ustedes me describieron este flujo perfectamente: 'necesitamos que nos manden la bitácora del compresor, la lista de trabajadores con CURP, el plano'. Con NEXUS le mandan al cliente un link cerrado, él ve solo la lista de cosas que ustedes le piden, las sube, y cada documento aparece etiquetado en el expediente correcto. Sin caos de correos.
+Si solo se acuerdan de dos cosas de esta junta, que sean estas dos."
+
+
+5. Módulos
+
+"Aquí están los ocho módulos completos. No los voy a leer todos — voy a destacar los que más impacto van a tener en su día a día:
+El Tablero por Empresa con Panorama de Avance: justo lo que pidieron — que cuando estén en sitio y les pregunten '¿cómo vamos?', abran la tablet y muestren la respuesta en 5 segundos. Sin pelearse con carpetas.
+El Expediente Acumulativo: como dijeron, todo se va sumando — Word, Excel, PDFs, fotos, planos. Organizado por norma. Histórico automático.
+El Maestro de Datos con Auto-llenado: la combinación de correspondencia que les expliqué.
+Las Solicitudes al Cliente: el link tipo Google Form.
+El Catálogo de Normas STPS Editable: vienen precargadas las que más usan — NOM-002, NOM-017, NOM-019, NOM-030, NOM-035, brigadas, protección civil. Si quieren agregar otra, lo hacen ustedes mismos sin programador.
+El módulo Multi-Ingeniero: cada uno entra con su usuario, ve sus empresas asignadas, y usted como administrador ve el panorama de todo el equipo.
+Alertas, y reportes en PDF con membrete CAESI."
+
+
+6. Seguridad y Control de Usuarios
+
+"Cuatro tipos de usuario. Cada quien ve solo lo que le corresponde:
+Usted como Administrador ve todo, asigna empresas, configura.
+Sus Ingenieros Consultores solo ven las empresas que usted les asignó.
+El Lector — útil para becarios o auxiliares — solo consulta, no edita nada.
+Y el Cliente entra por link cerrado: sin contraseña, sin ver otras empresas, solo el alcance de la solicitud específica.
+La seguridad técnica está cubierta: conexión cifrada, contraseñas encriptadas, respaldo diario, NDA firmado desde el día uno."
+
+
+7. Tecnología
+
+"No los voy a aburrir con tecnicismos. Solo dos puntos importantes:
+Uno: todo lo que ven en este stack es tecnología moderna, abierta, sin licencias mensuales perpetuas. Eso significa que después de la entrega, CAESI no le paga renta a nadie por usar su propio sistema.
+Dos: el código fuente es 100% propiedad de CAESI al cerrar el proyecto. Quedan libres. Si mañana quieren contratar a otro programador para hacer ajustes, pueden. No están atados a nosotros."
+
+
+8. Cronograma — 4 fases, 12 semanas
+
+"De aquí al lanzamiento son 12 semanas, partidas en 4 fases. Al final de cada fase hay una demo funcional para que ustedes la revisen con sus ingenieros y nos digan qué ajustar antes de seguir.
+La Fase 1, primeras 3 semanas, son cimientos: levantamiento detallado con sus ingenieros, login, gestión de empresas.
+La Fase 2, semanas 4 a 6, es el núcleo documental: catálogo de normas, expediente, y la función estrella — combinar correspondencia funcionando.
+La Fase 3, semanas 7 a 9, es el portal del cliente, solicitudes y reportes PDF.
+La Fase 4, semanas 10 a 12, son pruebas con datos reales de CAESI, capacitación al equipo, y despliegue oficial."
+
+
+9. Precios
+
+"Tres paquetes. Los tres traen la plataforma completa — incluyendo combinar correspondencia, que es la función estrella. La diferencia está en los extras.
+El Esencial, 65 mil pesos, ya incluye todo lo crítico: multi-usuario, expediente, maestro de datos, portal cerrado, solicitudes.
+El Profesional, 95 mil, agrega los reportes PDF con membrete CAESI, exportación a Excel, historial completo. Este es el que les recomiendo — es el que tiene mejor balance.
+El Élite, 130 mil, agrega branding completo, dominio personalizado tipo nexus.caesi.mx, capacitación presencial, manual de usuario hecho a la medida.
+Si quieren, después podemos contratar mantenimiento mensual — 4,500 o 7,500 al mes según el plan. Pero ese contrato es opcional, no obligatorio.
+El pago se hace en tres partes: 40% al firmar, 30% cuando vean la combinación de correspondencia funcionando — para que paguen confiados, no a ciegas —, y 30% al entregar."
+
+
+10. Comparativo de Mercado
+
+"Esta diapositiva existe por una sola razón: para que ustedes tengan claridad del valor real.
+Los SaaS internacionales — LogicGate, Apptega — cobran entre 20 y 100 mil pesos al mes, solo de licencia. En un año gastarían entre 3 y 15 veces más que con NEXUS, y encima en inglés y sin saber nada de STPS.
+Una agencia grande de desarrollo les cobraría entre 150 y 400 mil, con tiempos de 6 a 12 meses.
+Un freelancer sin respaldo puede salir más barato, pero con riesgo alto de abandono.
+NEXUS está en el punto óptimo: precio razonable, equipo con respaldo, código propio, sin licencias perpetuas."
+
+
+11. Cierre
+
+"Eso es NEXUS para CAESI. Mi propuesta concreta es que agendemos una reunión de una hora con sus ingenieros — Ana, Carlos, Luis — para aterrizar el detalle fino: qué normas tienen precargadas, qué formatos quieren plantilla, cómo se ven los reportes con su membrete.
+La cotización es válida hasta el 14 de junio. Si avanzamos esta semana, en 12 semanas tienen el sistema en vivo.
+¿Qué dudas tienen?"
+
+Tip de cierre: Calla. Espera. La primera persona que hable después del "¿qué dudas tienen?" pierde — esa es regla de oro de cierre.

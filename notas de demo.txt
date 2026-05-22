@@ -1,0 +1,107 @@
+🚀 DISCURSO PARA LA DEMO
+
+"Ahora les muestro cómo se ve por dentro. Esta es una demo real con datos de prueba — todo lo que vamos a tocar es funcional. Lo único es que las empresas que aparecen son ficticias."
+
+Pantalla 1 — Login
+
+"Lo primero, la pantalla de entrada. Como dijimos, multi-usuario: cada ingeniero con su correo y contraseña. Aquí abajo dejé tres accesos rápidos para que vean cómo cambia el sistema según quién entra: Admin, Ingeniero, o Lector. Voy a entrar como Admin."
+
+Acción: Clic en "Ingresar al sistema".
+
+Pantalla 2 — Tablero General
+
+"Esto es lo primero que ven al entrar. El Tablero General — pensado como su panorama del día.
+Arriba, los cuatro indicadores clave: cuántas empresas tienen activas, cuántos expedientes están al 100%, cuántos documentos están esperando que el cliente suba, y cuántas empresas requieren atención urgente.
+A la izquierda, la gráfica con el avance de todas sus empresas. A la derecha, el semáforo de urgencia — las empresas en rojo son las que se les están alargando.
+Abajo, la lista de empresas activas y la actividad reciente. Vean cómo aparece que 'Grupo Industrial Monterrey subió bitácora del compresor desde su portal' — eso es el cliente subiendo solo, sin que ustedes lo persiguieran. Y vean también: 'Ana López generó 4 formatos con auto-llenado' — eso es la combinación de correspondencia trabajando.
+Hasta abajo, próximos vencimientos. La fecha de la auditoría de Plásticos del Bajío está en 8 días — el sistema solo se los recordó."
+
+
+Pantalla 3 — Empresas
+Acción: Clic en "Empresas" en la barra lateral.
+
+"Aquí están todas sus empresas listadas. Pueden filtrar por estado, por ingeniero asignado, o buscar por nombre o RFC. Cada renglón muestra el avance, el estado, quién la está atendiendo, y cuándo fue la última actividad. Si dan clic en cualquiera, entran a su expediente."
+
+Acción: Clic en "Grupo Industrial Monterrey".
+
+Pantalla 4 — Detalle de Empresa (¡la pantalla más importante!)
+
+"Esta es la pantalla en la que sus ingenieros van a vivir todo el día. Y esta es la pantalla que les va a salvar en sitio cuando el cliente les pregunte '¿cómo vamos?'.
+Arriba: nombre de la empresa, RFC, ingeniero responsable, número de trabajadores, giro. El avance general y el estado.
+Y aquí — esto es lo que ustedes específicamente pidieron — los dos paneles: 'Lo que tenemos' del lado izquierdo, en verde, con todos los documentos que el cliente ya entregó. Y 'Lo que falta / Le debemos pedir al cliente' del lado derecho, en naranja, con lo que aún hace falta.
+Ese panel naranja es justamente lo que ustedes describieron: 'qué les falta, qué nos deben'. En la junta con el cliente abren esto, lo enseñan, y la conversación es objetiva.
+Abajo, el detalle por norma — NOM-035 al 80%, NOM-002 al 60% — con cada uno de los requisitos: lo que está completado tiene palomita verde y el archivo adjunto; lo pendiente tiene círculo rojo y un botón para subirlo cuando lo tengan.
+A la derecha tienen las acciones rápidas: ver el portal del cliente, mandarle una nueva solicitud, copiar el link del portal, ver y editar los datos maestros, generar el reporte PDF, mandar correo de avance, exportar a Excel."
+
+
+Pantalla 5 — Maestro de Datos (la primera función estrella)
+Acción: Clic en "Maestro de Datos" en la barra lateral.
+
+"Y aquí está la primera función estrella. Esto es la combinación de correspondencia.
+Arriba ven las estadísticas: 9 empresas con maestro configurado, 23 plantillas con auto-fill activado, 186 formatos generados este mes, y aproximadamente 62 horas ahorradas mensualmente — solo por no capturar lo mismo una y otra vez.
+Del lado izquierdo: los datos de la empresa. Razón social, RFC, domicilio fiscal, representante legal, giro, número de trabajadores, contacto. Doce campos.
+Del lado derecho, en tiempo real, la vista previa: así se ven los formatos cuando se generan. Los campos amarillos resaltados son los que se llenan automáticamente. Arriba, un formato Word de NOM-035 con la política de prevención. Abajo, un Excel de NOM-019 con el acta de la comisión de seguridad e higiene. Son dos formatos completamente diferentes, pero usan los mismos datos del maestro — sin que ustedes los hayan capturado dos veces.
+Si cambian aquí el representante legal, en todos los formatos se actualiza al instante.
+Y arriba tienen el botón mágico: 'Generar formatos auto-llenados'. En 8 segundos genera los formatos que ustedes elijan, con todos los datos ya puestos, listos para descargar y firmar."
+
+
+Pantalla 6 — Solicitudes al Cliente (la segunda función estrella)
+Acción: Clic en "Solicitudes" en la barra lateral.
+
+"Y aquí está la segunda función estrella. Las solicitudes con link único — el famoso 'tipo Google Form'.
+Vean la lista: cinco solicitudes activas. Cada una con su estado — completa, parcial, pendiente — y un contador: 2 de 4 documentos recibidos, 0 de 5, etcétera.
+Tomemos la primera, Grupo Industrial Monterrey. Le mandaron un link pidiendo cuatro cosas: bitácora del compresor, lista de trabajadores con CURP, plano del área de soldadura, acta del último simulacro. Ya entregaron dos. Las otras dos siguen pendientes. El link aparece abajo — pueden copiarlo o mandar recordatorio con un clic.
+Ahora les muestro cómo crean una nueva solicitud."
+
+Acción: Clic en "+ Nueva Solicitud al Cliente".
+
+"Eligen la empresa. Después marcan de un catálogo qué documentos van a pedir — son las cosas más comunes que ustedes piden: bitácoras, listas de trabajadores con CURP, planos, constancias, exámenes médicos. Pueden marcar cuantos quieran. Agregan un mensaje personalizado si quieren. Le dan a 'Enviar' y el cliente recibe el link por correo automáticamente."
+
+Acción: Cierra el modal y haz clic en "Ver portal del cliente" de la primera solicitud.
+
+Pantalla 7 — Portal del Cliente (lo que ve el cliente)
+
+"Y esto es lo que el cliente ve cuando hace clic en el link que le mandaron. Sin contraseña. Sin crear cuenta. Sin instalar nada.
+Arriba, saludo personalizado con el nombre de su empresa. Le dice quién mandó la solicitud — 'CAESI Consultoría · Ing. Ana López' — y la fecha.
+Abajo, la barra de progreso: cuántos documentos llevan, cuántos faltan.
+Y luego cada documento es una tarjeta independiente. Los que ya entregaron aparecen en verde, con el archivo adjunto. Los pendientes tienen el cuadro grande para subir el archivo: clic, seleccionar, listo. Vean cómo si doy clic aquí…"
+
+Acción: Clic en un cuadro de subir.
+
+"…simula la subida, y al terminar le aparece la confirmación verde. Y CAESI recibe notificación al instante de que el cliente ya subió.
+Esto es lo que ustedes querían: el cliente no se confunde, no llena formularios eternos, no tiene que aprenderse un sistema nuevo. Solo sube los archivos que le pidieron."
+
+Acción: Clic en "✕ Cerrar vista previa".
+
+Pantalla 8 — Catálogo de Normas STPS
+Acción: Clic en "Normas STPS" en la barra lateral.
+
+"El catálogo de normas. Vienen precargadas las más comunes en consultoría STPS: NOM-002 de incendios, NOM-017 de equipo de protección, NOM-019 de la comisión mixta, NOM-030 de servicios preventivos, NOM-035 psicosocial, brigadas de emergencia y protección civil. Cada una con sus requisitos documentales detallados.
+Si dan clic en cualquiera…"
+
+Acción: Clic en una norma.
+
+"…ven la lista completa de requisitos: cada uno con su tipo de evidencia (documento, Excel, imagen) y si es obligatorio u opcional según la norma. Esto se puede editar. Si sale una NOM nueva el próximo año, ustedes mismos la agregan sin necesidad de programador."
+
+Acción: Cierra el modal.
+
+Pantalla 9 — Plantillas Word/Excel
+Acción: Clic en "Plantillas Word/Excel" en la barra lateral.
+
+"Y aquí están las plantillas Word y Excel que el sistema usa para auto-generar los formatos. Pueden ser sus mismas plantillas actuales — solo las suben una vez, marcan dónde van los campos del maestro, y listo.
+Vean la etiqueta turquesa 'Auto-fill' arriba a la derecha: esa marca dice 'esta plantilla usa los datos del Maestro'. Cuando le dan clic en 'Generar', la plantilla se llena sola.
+Pueden tener plantillas de Word, plantillas de Excel, plantillas por norma, plantillas personalizadas por empresa — lo que necesiten."
+
+
+Pantalla 10 — Notificaciones
+Acción: Clic en el icono de campana arriba a la derecha.
+
+"Una cosa más antes de cerrar. Las notificaciones, arriba a la derecha. El sistema avisa cuando algo importante pasa: el cliente subió un documento, una empresa lleva 3 semanas sin movimiento, una norma se completó al 100%, un vencimiento está cerca.
+Todo esto también llega por correo a los ingenieros — no tienen que estar entrando al sistema cada cinco minutos para enterarse."
+
+
+Cierre de la Demo
+
+"Y esto es NEXUS. Lo que vieron es lo que se entrega — funcional, en navegador, accesible desde tablet o celular, con su marca CAESI al final del proyecto.
+Mi propuesta es que mañana mismo, con sus ingenieros, agendemos una hora para aterrizar el detalle: qué NOMs específicas precargamos, qué formatos quieren plantilla primero, cómo quieren el membrete del PDF.
+¿Qué les gustaría ver de nuevo o qué duda tienen?"
