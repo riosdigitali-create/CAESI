@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sube tu base · CAESI</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:24px}
+  .card{width:100%;max-width:760px;background:#1e293b;border:1px solid #334155;border-radius:18px;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+  .brand{font-weight:800;letter-spacing:.5px;color:#38bdf8;font-size:14px}
+  .hi{margin:6px 0 0;color:#38bdf8;font-weight:700;font-size:15px}
+  h1{font-size:23px;margin:6px 0 4px}
+  p.sub{margin:0 0 18px;color:#94a3b8;font-size:14px;line-height:1.55}
+  label{display:block;font-size:13px;color:#cbd5e1;margin:14px 0 6px;font-weight:600}
+  input[type=text],textarea,select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #475569;background:#0f172a;color:#e2e8f0;font-size:15px;font-family:inherit}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:#38bdf8}
+  textarea{min-height:60px;resize:vertical}
+  .hint{font-size:12px;color:#64748b;margin-top:4px}
+  .row2{display:flex;gap:12px;flex-wrap:wrap}
+  .row2>div{flex:1;min-width:160px}
+
+  .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 7px;border-radius:6px;text-transform:uppercase}
+  .t-emp{background:#0c4a6e;color:#bae6fd}
+  .t-cen{background:#3b0764;color:#e9d5ff}
+  .t-nor{background:#064e3b;color:#bbf7d0}
+
+  /* Bloque de norma (como una rama del PDF) */
+  .norma{margin-top:16px;border:1px solid #334155;border-radius:14px;background:#0b1220;padding:16px}
+  .norma-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .norma-head .ttl{font-weight:700;font-size:14px;color:#e2e8f0}
+  .norma-head .rm{margin-left:auto;background:none;border:1px solid #334155;color:#94a3b8;border-radius:8px;padding:5px 9px;font-size:12px;cursor:pointer}
+  .norma-head .rm:hover{border-color:#ef4444;color:#fca5a5}
+
+  /* Casillas de documento (como los códigos punteados del PDF) */
+  .slots{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  @media(max-width:560px){.slots{grid-template-columns:1fr}}
+  .slot{border:2px dashed #475569;border-radius:12px;background:#0f172a;padding:12px;cursor:pointer;transition:.12s}
+  .slot:hover{border-color:#38bdf8;background:#0b1220}
+  .slot.over{border-color:#38bdf8;background:#0b1220}
+  .slot.filled{border-style:solid;border-color:#16a34a;background:#06210f}
+  .slot .nm{font-weight:700;font-size:13.5px;color:#e2e8f0;display:flex;align-items:center;gap:6px}
+  .slot .nm .ic{width:18px;height:18px;flex:0 0 auto;color:#64748b}
+  .slot.filled .nm .ic{color:#22c55e}
+  .slot .ph{font-size:11.5px;color:#64748b;margin-top:4px}
+  .slot .files{list-style:none;margin:8px 0 0;padding:0;font-size:12px}
+  .slot .files li{display:flex;align-items:center;gap:6px;background:#1e293b;border:1px solid #334155;border-radius:7px;padding:5px 8px;margin-top:5px}
+  .slot .files li .fn{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .slot .files li .st{flex:0 0 auto;color:#94a3b8;font-size:11px}
+  .slot .files li.ok .st{color:#22c55e}
+  .slot .files li.err .st{color:#ef4444}
+  .slot .files li .x{cursor:pointer;color:#64748b;font-weight:700}
+  .slot .files li .x:hover{color:#ef4444}
+
+  .addslot{margin-top:10px;background:none;border:1px dashed #475569;color:#94a3b8;border-radius:10px;padding:9px;width:100%;cursor:pointer;font-size:12.5px}
+  .addslot:hover{border-color:#38bdf8;color:#cbd5e1}
+  .addnorma{margin-top:14px;width:100%;padding:12px;border:1px dashed #38bdf8;border-radius:12px;background:#0b1220;color:#38bdf8;font-weight:700;cursor:pointer;font-size:14px}
+  .addnorma:hover{background:#0d1830}
+
+  button.send{margin-top:20px;width:100%;padding:14px;border:0;border-radius:10px;background:#38bdf8;color:#04293a;font-weight:800;font-size:16px;cursor:pointer}
+  button.send:disabled{opacity:.5;cursor:default}
+  .done{margin-top:16px;padding:14px;border-radius:10px;background:#064e3b;border:1px solid #10b981;color:#d1fae5;font-size:14px;display:none}
+  .foot{margin-top:18px;color:#64748b;font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="brand">CAESI</div>
+  <div class="hi" id="hi"></div>
+  <h1>Sube tu base de documentos</h1>
+  <p class="sub">Escribe la empresa, elige el <b>centro</b> y la <b>norma</b>, y suelta cada archivo en su casilla. El sistema lo guarda ordenado igual que el expediente. Sin cuenta ni contraseña.</p>
+
+  <label>Ingeniero (quién sube) *</label>
+  <input id="ing" type="text" placeholder="Tu nombre" autocomplete="off">
+
+  <label>Empresa *</label>
+  <input id="empresa" type="text" placeholder="Ej. Farmacéuticos Rayere, S.A." autocomplete="off" list="empresas">
+  <datalist id="empresas">
+    <option value="Farmacéuticos Rayere, S.A.">
+    <option value="Garrido Originales">
+    <option value="Laposse"><option value="Salerm"><option value="Impreflex"><option value="Ingreditech">
+  </datalist>
+
+  <div id="normas"></div>
+  <button class="addnorma" id="addNorma">+ Agregar otra norma</button>
+
+  <label style="margin-top:18px">Nota (opcional)</label>
+  <textarea id="desc" placeholder="Ej: Falta el acta CMSH 2025. Subo lo demás de la NOM-001."></textarea>
+
+  <button class="send" id="btn">Enviar documentos</button>
+  <div class="done" id="done"></div>
+  <div class="foot">Conexión segura · CAESI Cumplimiento STPS</div>
+</div>
+
+<!-- input de archivos reutilizable -->
+<input id="picker" type="file" multiple style="display:none">
+
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const SUPA_URL = 'https://vbihkgnydgoqocdnygzf.supabase.co';
+const SUPA_KEY = 'sb_publishable_sAVPh0l7aO4QGbGBRMAlvg_aTbEFdTt';
+const MAKE_HOOK = 'https://hook.us2.make.com/mjglqyq413l9l65qdqwkqwyb2jc8glyq';
+const sb = createClient(SUPA_URL, SUPA_KEY);
+const $ = (id) => document.getElementById(id);
+
+const NOMS = ['001','002','004','005','006','009','010','011','015','017','018','019','020','021','022','024','025','026','027','028','029','030','031','032','033','034','035','036'];
+const CENTROS = ['508','621','612','614','72','185','53','55','191','155'];
+const SLOTS_BASE = [
+  { label:'Escrito de norma', tipo:'Escrito-de-norma', ph:'el documento principal de la norma' },
+  { label:'Bitácora 01',      tipo:'Bitacora-01',      ph:'primera bitácora' },
+  { label:'Bitácora 02',      tipo:'Bitacora-02',      ph:'segunda bitácora' },
+  { label:'Planos',           tipo:'Planos',           ph:'planos / croquis' },
+];
+
+let normas = [];            // [{centro, nom, slots:[{label,tipo,ph,files:[]}]}]
+let pickTarget = null;      // {ni, si} a dónde van los archivos elegidos
+
+const ingParam = (new URLSearchParams(location.search).get('ing') || '').replace(/[-_]+/g,' ').trim();
+if (ingParam){ $('ing').value = ingParam; $('hi').textContent = 'Hola, ' + ingParam; }
+
+function slug(s){ let x=(s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); let o=''; for(const c of x){ if(c>='a'&&c<='z')o+=c; else if(c>='0'&&c<='9')o+=c; else o+='-'; } return o.replace(/-+/g,'-').replace(/^-|-$/g,''); }
+function sanSeg(s){ let o=''; for(const c of (s||'').toString()){ const ok=(c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||c==='.'||c==='-'||c==='_'||c===' '; o+= ok?c:'_'; } return o.replace(/\s+/g,'_'); }
+function newNorma(){ return { centro:'', nom:'', slots: SLOTS_BASE.map(s => ({...s, files:[]})) }; }
+
+function render(){
+  const host = $('normas'); host.innerHTML='';
+  normas.forEach((n, ni) => host.appendChild(renderNorma(n, ni)));
+}
+
+function renderNorma(n, ni){
+  const box = document.createElement('div'); box.className='norma';
+
+  const head = document.createElement('div'); head.className='norma-head';
+  head.innerHTML = '<span class="tag t-nor">Norma</span><span class="ttl">Norma '+(ni+1)+'</span>';
+  const rm = document.createElement('button'); rm.className='rm'; rm.textContent='Quitar';
+  rm.onclick = () => { normas.splice(ni,1); if(!normas.length) normas.push(newNorma()); render(); };
+  head.appendChild(rm); box.appendChild(head);
+
+  // Centro + Norma
+  const sel = document.createElement('div'); sel.className='row2';
+  sel.innerHTML =
+    '<div><label><span class="tag t-cen">Centro</span> número de centro *</label>'+
+      '<input type="text" inputmode="numeric" placeholder="Ej. 508" list="centros" value="'+(n.centro||'')+'" id="cen'+ni+'"></div>'+
+    '<div><label><span class="tag t-nor">Norma</span> NOM *</label>'+
+      '<select id="nom'+ni+'"><option value="">Elige…</option>'+
+        NOMS.map(x=>'<option value="'+x+'"'+(n.nom===x?' selected':'')+'>NOM-'+x+'</option>').join('')+
+      '</select></div>';
+  box.appendChild(sel);
+
+  // Casillas
+  const slots = document.createElement('div'); slots.className='slots';
+  n.slots.forEach((s, si) => slots.appendChild(renderSlot(s, ni, si)));
+  box.appendChild(slots);
+
+  const add = document.createElement('button'); add.className='addslot'; add.textContent='+ otro documento';
+  add.onclick = () => {
+    const name = prompt('Nombre del documento (ej. Acta CMSH, Tríptico, Capacitación):');
+    if(!name) return;
+    n.slots.push({ label:name, tipo: sanSeg(name).replace(/_/g,'-'), ph:'documento adicional', files:[] });
+    render();
+  };
+  box.appendChild(add);
+
+  // listeners centro/nom
+  setTimeout(() => {
+    $('cen'+ni).addEventListener('input', e => { n.centro = e.target.value.replace(/[^0-9]/g,''); e.target.value=n.centro; });
+    $('nom'+ni).addEventListener('change', e => { n.nom = e.target.value; });
+  });
+  return box;
+}
+
+function renderSlot(s, ni, si){
+  const el = document.createElement('div'); el.className='slot'+(s.files.length?' filled':'');
+  const check = s.files.length ? '✓' : '＋';
+  el.innerHTML = '<div class="nm"><span class="ic">'+check+'</span>'+s.label+'</div><div class="ph">'+(s.files.length? s.files.length+' archivo(s)' : s.ph)+'</div>';
+  const ul = document.createElement('ul'); ul.className='files';
+  s.files.forEach((f, fi) => {
+    const li=document.createElement('li'); if(f._st) li.className=f._st;
+    li.innerHTML = '<span class="fn">'+(f.name)+'</span><span class="st">'+(f._stx||'')+'</span>';
+    if(!f._st){ const x=document.createElement('span'); x.className='x'; x.textContent='✕'; x.onclick=(ev)=>{ev.stopPropagation(); s.files.splice(fi,1); render();}; li.appendChild(x); }
+    ul.appendChild(li);
+  });
+  el.appendChild(ul);
+
+  el.addEventListener('click', () => { pickTarget={ni,si}; $('picker').value=''; $('picker').click(); });
+  el.addEventListener('dragover', e => { e.preventDefault(); el.classList.add('over'); });
+  el.addEventListener('dragleave', () => el.classList.remove('over'));
+  el.addEventListener('drop', e => { e.preventDefault(); el.classList.remove('over'); if(e.dataTransfer&&e.dataTransfer.files){ addTo(ni,si,e.dataTransfer.files); } });
+  return el;
+}
+
+function addTo(ni, si, fl){ for(const f of fl) normas[ni].slots[si].files.push(f); render(); }
+$('picker').addEventListener('change', e => { if(pickTarget){ addTo(pickTarget.ni, pickTarget.si, e.target.files); pickTarget=null; } });
+
+$('addNorma').addEventListener('click', () => { normas.push(newNorma()); render(); });
+
+function notificar(p){
+  try{ fetch(MAKE_HOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)}).catch(()=>{}); }catch(e){}
+}
+
+$('btn').addEventListener('click', async () => {
+  const empRaw = $('empresa').value.trim();
+  const ingRaw = $('ing').value.trim();
+  const descRaw = $('desc').value.trim();
+  if(!ingRaw){ alert('Escribe tu nombre (ingeniero)'); return; }
+  if(!empRaw){ alert('Escribe el nombre de la empresa'); return; }
+
+  // valida y junta los archivos pendientes
+  const jobs = [];
+  for(let ni=0; ni<normas.length; ni++){
+    const n = normas[ni];
+    const has = n.slots.some(s => s.files.length);
+    if(!has) continue;
+    if(!n.centro){ alert('Falta el número de centro en la Norma '+(ni+1)); return; }
+    if(!n.nom){ alert('Falta elegir la NOM en la Norma '+(ni+1)); return; }
+    for(let si=0; si<n.slots.length; si++){
+      const s = n.slots[si];
+      s.files.forEach(f => { if(f._st!=='ok') jobs.push({ni,si,f,n,s}); });
+    }
+  }
+  if(!jobs.length){ alert('Agrega al menos un documento en una casilla'); return; }
+
+  const empS = slug(empRaw) || 'sin-empresa';
+  const ingS = slug(ingRaw) || 'sin-ingeniero';
+  $('btn').disabled=true; $('btn').textContent='Enviando...';
+  let ok=0;
+  for(const j of jobs){
+    j.f._st='up'; j.f._stx='subiendo…'; render();
+    const nomFull = 'NOM-'+j.n.nom;
+    const fname = sanSeg(j.f.name);
+    const path = [empS, ingS, j.n.centro, nomFull, j.s.tipo].join('/') + '/' + Date.now() + '_' + fname;
+    const r = await sb.storage.from('intake').upload(path, j.f, { upsert:false, contentType:j.f.type||'application/octet-stream' });
+    if(r.error){ j.f._st='err'; j.f._stx='error'; }
+    else {
+      j.f._st='ok'; j.f._stx='listo'; ok++;
+      notificar({ empresa:empRaw, ingeniero:ingRaw, archivo:j.f.name, descripcion:descRaw, ruta:path, tamano:j.f.size,
+        centro:j.n.centro, norma:nomFull, tipo:j.s.label,
+        abrir: SUPA_URL+'/functions/v1/abrir?path='+encodeURIComponent(path) });
+    }
+    render();
+  }
+  const d=$('done'); d.style.display='block';
+  d.textContent = ok===jobs.length
+    ? ('Listo. Recibimos '+ok+' documento(s) de '+empRaw+'. Gracias, '+ingRaw+'.')
+    : ('Subidos '+ok+' de '+jobs.length+'. Reintenta los que fallaron.');
+  $('btn').textContent = ok===jobs.length ? 'Enviado' : 'Reintentar';
+  $('btn').disabled = ok===jobs.length;
+});
+
+// arranca con una norma lista
+normas.push(newNorma());
+render();
+</script>
+<datalist id="centros">
+  <option value="508"><option value="621"><option value="612"><option value="614"><option value="72"><option value="185"><option value="53"><option value="55"><option value="191"><option value="155">
+</datalist>
+</body>
+</html>
